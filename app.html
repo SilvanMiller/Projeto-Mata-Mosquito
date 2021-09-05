@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Silvan Miller">
+    <meta name="keywords" content="curso, frontend, completo, site, moderno, responsivo, jogo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Mata Mosquito</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="jogo2.js"></script>
+
+</head>
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="painel">
+        <div class=" vidas">
+            <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+            <img id="v1" src="imagens/coracao_cheio.png">
+            <img id="v2" src="imagens/coracao_cheio.png">
+            <img id="v3" src="imagens/coracao_cheio.png">
+            <img id="v4" src="imagens/coracao_cheio.png">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var gerarMosquito = setInterval(function() {
+            posicaoRandomica()
+        }, gerarMosquitoTempo)
+    </script>
+
+</body>
+
+</html>
